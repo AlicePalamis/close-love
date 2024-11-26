@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/close-love/static/css/main.6c8e45dd.css",
+    "main.css": "/close-love/static/css/main.6b0fec53.css",
     "main.js": "/close-love/static/js/main.a1223c38.js",
     "static/js/885.c7f5e7a1.chunk.js": "/close-love/static/js/885.c7f5e7a1.chunk.js",
     "static/js/453.1faa4868.chunk.js": "/close-love/static/js/453.1faa4868.chunk.js",
     "static/media/ardiana.mp3": "/close-love/static/media/ardiana.bd35cd54f88bb0a89ed5.mp3",
     "index.html": "/close-love/index.html",
-    "main.6c8e45dd.css.map": "/close-love/static/css/main.6c8e45dd.css.map",
+    "main.6b0fec53.css.map": "/close-love/static/css/main.6b0fec53.css.map",
     "main.a1223c38.js.map": "/close-love/static/js/main.a1223c38.js.map",
     "885.c7f5e7a1.chunk.js.map": "/close-love/static/js/885.c7f5e7a1.chunk.js.map",
     "453.1faa4868.chunk.js.map": "/close-love/static/js/453.1faa4868.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6c8e45dd.css",
+    "static/css/main.6b0fec53.css",
     "static/js/main.a1223c38.js"
   ]
 }

@@ -30,7 +30,7 @@ const Player = () => {
             <div className={styles.faButton}>
                 {isPlaying
                     ? <FontAwesomeIcon onClick={() => stopSound()} icon={faStop} />
-                    : <FontAwesomeIcon onClick={() => playSound()} icon={faPlay} />}
+                    : <FontAwesomeIcon className={styles.shakingAnimation} onClick={() => playSound()} icon={faPlay} />}
             </div>
         </div>
     )

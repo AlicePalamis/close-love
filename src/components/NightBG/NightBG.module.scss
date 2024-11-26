@@ -5,8 +5,7 @@ $star: #8DDCA4; //rgba(95, 145, 255, 1)
 $star-shadow: #8E5572; //rgba(105, 155, 255, 1)
 
 .area {
-    // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    background: $bg;
+    background: radial-gradient(ellipse at bottom, #2b1923 0%, $bg 100%);
     height: 100vh;
     overflow: hidden;
     display: flex;

@@ -5,11 +5,12 @@ import { faPlay, faStop } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
 
 import Adriana from './../../audio/ardiana.mp3';
+import CallOfSilence from './../../audio/call_of_silence.mp3';
 
 const Player = () => {
     const [isPlaying, setIsPlaying] = useState(false)
-    const [play, { stop }] = useSound(Adriana, {
-        volume: 0.1,
+    const [play, { stop }] = useSound(CallOfSilence, {
+        volume: 0.06,
         onend: () => {
             setIsPlaying(false)
         }

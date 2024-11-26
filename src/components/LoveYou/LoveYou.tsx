@@ -21,9 +21,7 @@ const texts = [
     "Minä rakastan sinua",
     "Ti amo",
     "Aku cinta padamu",
-    "أحبك",
     "Amo te",
-    "मैं तुमसे प्यार करता हूँ",
     "Jeg elsker deg",
     "Anha zhilak yera",
     "Nga yawne lu oer",
@@ -39,7 +37,7 @@ const colors = [
 const genSequence = (texts: string[], timeout: number, onAfter?: ((index: number) => () => void)) => {
     const seq = [];
     for (let i = 0; i < texts.length; i++) {
-        seq.push(texts[i]);
+        seq.push(texts[i] + '...');
         seq.push(timeout);
         seq.push('')
         if (onAfter) {

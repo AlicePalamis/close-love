@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import styles from './LoveYou.module.scss'
 

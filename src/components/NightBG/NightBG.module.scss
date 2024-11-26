@@ -1,0 +1,143 @@
+$shooting-time: 4500ms;
+
+$bg: #1D1E18; //rgba(0, 0, 255, 0)
+$star: #8DDCA4; //rgba(95, 145, 255, 1)
+$star-shadow: #8E5572; //rgba(105, 155, 255, 1)
+
+.area {
+    // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    background: $bg;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.night {
+    position: relative;
+    min-width: 1400px;
+    min-height: 1400px;
+    transform: rotateZ(45deg);
+    animation: sky 200000ms linear infinite;
+}
+
+.shootingStar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    // width: 100px;
+    height: 2px;
+    background: linear-gradient(-45deg, $star, $bg);
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px $star-shadow);
+    animation:
+        tail $shooting-time ease-in-out infinite,
+        shooting $shooting-time ease-in-out infinite;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
+        // width: 30px;
+        height: 2px;
+        background: linear-gradient(-45deg, $bg, $star, $bg);
+        transform: translateX(50%) rotateZ(45deg);
+        border-radius: 100%;
+        animation: shining $shooting-time ease-in-out infinite;
+    }
+
+    &::after {
+        // CodePen Error
+        // @extend .shooting_star::before;
+
+        content: '';
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 0;
+        // width: 30px;
+        height: 2px;
+        background: linear-gradient(-45deg, $bg, $star, $bg);
+        transform: translateX(50%) rotateZ(45deg);
+        border-radius: 100%;
+        animation: shining $shooting-time ease-in-out infinite;
+        transform: translateX(50%) rotateZ(-45deg);
+    }
+
+    @for $i from 1 through 100 {
+        &:nth-child(#{$i}) {
+            $delay: random(9999) + 0ms;
+            // top: calc(50% - #{random(100vw) - 100vw / 2});
+            // left: calc(50% - #{random(100vh) - 100vh / 2});
+            top: #{random(1400)}px;
+            left: #{random(1400)}px;
+            // left: calc(#{random(100vh / 2)});
+            // left: calc(50% - #{random(100vh) - 100vh / 2});
+            animation-delay: $delay;
+            opacity: random(100) / 100 + 0.1;
+
+            &::before,
+            &::after {
+                animation-delay: $delay;
+            }
+        }
+    }
+}
+
+@keyframes tail {
+    0% {
+        width: 10px;
+    }
+
+    30% {
+        width: 100px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes shining {
+    0% {
+        width: 0;
+    }
+
+    30% {
+        width: 20px;
+    }
+
+    60% {
+        width: 30px;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes shooting {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(300px);
+    }
+}
+
+@keyframes sky {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    50% {
+        transform: rotate(45 + 90deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}

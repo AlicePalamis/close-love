@@ -1,0 +1,20 @@
+.night {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+.player {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+}
+
+.area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
